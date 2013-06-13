@@ -63,3 +63,13 @@ Interférences d'une activité à l'autre
 ```
 
 ## Pseudo-dispersion
+
+```r
+  > stripchart(marks$mark~marks$homework, method="jitter", vertical=T, xlab="Homework", ylab="Mark", main="Marks for the two homeworks", pch=3)
+  > points(c(mean(firstHomework$mark), mean(secundHomework$mark)), pch=3, col="tomato")
+  > lines(c(mean(firstHomework$mark), mean(secundHomework$mark)), pch=3, col="tomato", lwd=2)
+```
+
+## Descriptive analysis
+
+Les moyennes des deux devoirs sont relativement similaires mais la distribution des notes est différente : pour le premier devoir, l'essentiel des notes est compris entre 12 et 20, alors que les notes du second devoir sont réparties entre 5 et 20.

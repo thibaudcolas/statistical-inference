@@ -18,3 +18,7 @@ var(firstHomework$mark)
 var(secundHomework$mark)
 sd(firstHomework$mark)
 sd(secundHomework$mark)
+
+stripchart(marks$mark~marks$homework, method="jitter", vertical=T, xlab="Homework", ylab="Mark", main="Marks for the two homeworks", pch=3)
+points(c(mean(firstHomework$mark), mean(secundHomework$mark)), pch=3, col="tomato")
+lines(c(mean(firstHomework$mark), mean(secundHomework$mark)), pch=3, col="tomato", lwd=2)
