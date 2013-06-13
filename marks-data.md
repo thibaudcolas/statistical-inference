@@ -2,22 +2,19 @@
 
 ## Variables
 
-Note : variable numérique quantitative discrète 
-Domaine : [0;20]
+- Mark : numerical continuous on [0;20]
+- Homework : dichotomous : hw1, hw2
 
-Devoir : variable qualitative ordinale (? nominale)
-Deux valeurs : dev1, dev2
+## Distribution
 
-## Plan de l'étude
+Univariate crossed distribution with each student taking both homework subjects.
 
-Plan monofactoriel croisé, groupes appariés
+Formula : `S51*M2`
 
-Formule : S51*M2
+102 observations for 51 subjects
+All 51 subjects take both M1 and M2
 
-102 données pour 51 sujets
-Les 51 sujets passent M1 et M2
-
-Interférences d'une activité à l'autre
+There should be interferences between both activities.
 
 ## Overview of the dataset
 
@@ -38,7 +35,7 @@ Interférences d'une activité à l'autre
             Max.   :20.00  
 ```
 
-## Statistiques descriptives indices
+## Descriptive statistics measures
 
 ```r
   > firstHomework <- subset(marks, homework == 'hw1')
@@ -62,7 +59,7 @@ Interférences d'une activité à l'autre
   [1] 3.874603
 ```
 
-## Pseudo-dispersion
+## Scatter plot
 
 ```r
   > stripchart(marks$mark~marks$homework, method="jitter", vertical=T, xlab="Homework", ylab="Mark", main="Marks for the two homeworks", pch=3)
@@ -72,4 +69,4 @@ Interférences d'une activité à l'autre
 
 ## Descriptive analysis
 
-Les moyennes des deux devoirs sont relativement similaires mais la distribution des notes est différente : pour le premier devoir, l'essentiel des notes est compris entre 12 et 20, alors que les notes du second devoir sont réparties entre 5 et 20.
+The means of both homework are similar but the distribution of the marks differs : for the first homework, the majority of the marks is comprised between 12 and 20, whereas for the secund one marks are spread between 5 and 20.
