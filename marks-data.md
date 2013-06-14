@@ -61,11 +61,16 @@ There should be interferences between both activities.
 
 ## Scatter plot
 
+The following scatter plot compares the marks of the two homeworks, and outlines their means.
+
 ```r
   > stripchart(marks$mark~marks$homework, method="jitter", vertical=T, xlab="Homework", ylab="Mark", main="Marks for the two homeworks", pch=3)
   > points(c(mean(firstHomework$mark), mean(secundHomework$mark)), pch=3, col="tomato")
   > lines(c(mean(firstHomework$mark), mean(secundHomework$mark)), pch=3, col="tomato", lwd=2)
 ```
+
+![Marks scatterplot](marks-scatterplot.png)
+
 
 ## Descriptive analysis
 
