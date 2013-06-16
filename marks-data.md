@@ -71,7 +71,29 @@ The following scatter plot compares the marks of the two homeworks, and outlines
 
 ![Marks scatterplot](marks-scatterplot.png)
 
-
 ## Descriptive analysis
 
-The means of both homework are similar but the distribution of the marks differs : for the first homework, the majority of the marks is comprised between 12 and 20, whereas for the secund one marks are spread between 5 and 20.
+Thanks to this data visualization, we see that although the means are similar, the distribution of the marks is different. This difference "jumps to the eyes" : for the first homework, the majority of the marks is comprised between 12 and 20, whereas for the secund one marks are spread between 5 and 20.
+
+## Student's t-test
+
+The student t-test can be applied because we believe the marks to follow a normal distribution. We'll use a t test for a crossed univariate protocol. To check if there is a difference we'll make a two-sided test.
+
+```r
+  > t.test(marks$mark~marks$homework,paired=T,alternative="two.sided")
+
+    Paired t-test
+
+  data:  marks$mark by marks$homework 
+  t = 1.5624, df = 50, p-value = 0.1245
+  alternative hypothesis: true difference in means is not equal to 0 
+  95 percent confidence interval:
+   -0.2519743  2.0166801 
+  sample estimates:
+  mean of the differences 
+                0.8823529 
+```
+
+For 50 degrees of freedom, we obtain `t = 1.5624` and the associated probability `p = 0.1245`. With a 5% threshold, 0.1245 > 0.05 ⇔ p > threshold. We are over the threshold, __thus the difference between the means isn't relevant__ and the null hypothesis « There is a difference between the means » is invalidated.
+
+## Prediction
