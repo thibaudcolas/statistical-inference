@@ -33,3 +33,8 @@ lines(c(mean(firstHomework$mark), mean(secundHomework$mark)), pch=3, col="tomato
 # Student's t-test
 
 t.test(marks$mark~marks$homework,paired=T,alternative="two.sided")
+
+# Prediction
+
+hw1<-marks[marks$homework=="hw1","mark"]
+hw2<-marks[marks$homework=="hw2","mark"]

@@ -97,3 +97,12 @@ The student t-test can be applied because we believe the marks to follow a norma
 For 50 degrees of freedom, we obtain `t = 1.5624` and the associated probability `p = 0.1245`. With a 5% threshold, 0.1245 > 0.05 ⇔ p > threshold. We are over the threshold, __thus the difference between the means isn't relevant__ and the null hypothesis « There is a difference between the means » is invalidated.
 
 ## Prediction
+
+We'll now look at whether the mark obtained for the first homework predicts the secund mark.
+
+We first create two vectors for each homework.
+
+```r
+  > hw1<-marks[marks$homework=="hw1","mark"]
+  > hw2<-marks[marks$homework=="hw2","mark"]
+```
