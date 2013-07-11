@@ -106,3 +106,14 @@ We first create two vectors for each homework.
   > hw1<-marks[marks$homework=="hw1","mark"]
   > hw2<-marks[marks$homework=="hw2","mark"]
 ```
+
+We then use them to create a scatter plot.
+
+```r
+  > plot(jitter(hw1),jitter(hw2), xlab="First homework", ylab="Secund Homework", ylim=c(0,20))
+  > lines(c(mean(hw1),mean(hw1)),c(0,20),col="tomato")
+  > lines(c(0,20),c(mean(hw2),mean(hw2)),col="tomato")
+``
+
+![Prediction scatterplot](prediction-scatterplot.png)
+
