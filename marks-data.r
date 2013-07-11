@@ -42,3 +42,12 @@ hw2<-marks[marks$homework=="hw2","mark"]
 plot(jitter(hw1),jitter(hw2), xlab="First homework", ylab="Secund Homework", ylim=c(0,20))
 lines(c(mean(hw1),mean(hw1)),c(0,20),col="tomato")
 lines(c(0,20),c(mean(hw2),mean(hw2)),col="tomato")
+
+# Linear model
+
+model <- lm(hw2~hw1)
+coef(model)
+
+abline(model, lwd=2, col="red")
+
+summary(model)["adj.r.squared"]

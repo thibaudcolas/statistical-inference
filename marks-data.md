@@ -117,3 +117,37 @@ We then use them to create a scatter plot.
 
 ![Prediction scatterplot](prediction-scatterplot.png)
 
+## Linear model
+
+In this analysis, we assume that the first homework's mark helps predicting the secund's. We imply that the first homework was due before the secund one and that this preliminary work has had an impact on the marks.
+
+Because the two variables are numerical, we'll use a linear model to study their relationship.
+
+```r
+  > model <- lm(hw2~hw1)
+  > coef(model)
+
+  (Intercept)         hw1 
+    6.9217227   0.4592285 
+```
+
+We thus have `Y = a + bX + e`, or `HW2 = 6.0217227 + 0.4592285 * HW1` + e`
+
+We then add our linear model line to the graph :
+
+```r
+  > abline(model, lwd=2, col="red")
+```
+
+![Linear model scatterplot](linearmodel-line.png)
+
+We then compute an adjusted khi-squared.
+
+```r
+  > summary(model)["adj.r.squared"]
+
+  $adj.r.squared
+  [1] 0.1999131
+```
+
+This 0.19 coefficient means that only 20% of the marks' variation between homeworks is explained by our model. This fifth of explanation may seem small, but we have to keep in mind that there are many parameters to take into account (homeworks' difficulty, student's motivation, etc).
