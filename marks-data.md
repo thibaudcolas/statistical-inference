@@ -151,3 +151,9 @@ We then compute an adjusted khi-squared.
 ```
 
 This 0.19 coefficient means that only 20% of the marks' variation between homeworks is explained by our model. This fifth of explanation may seem small, but we have to keep in mind that there are many parameters to take into account (homeworks' difficulty, student's motivation, etc).
+
+## To conclude
+
+Even though the secund homework's marks aren't significatively different from the first one, one fifth of the variation between subjects is explained by the fisrt subject's marks.
+
+To further analyze our data, we will need other variables and factors.
