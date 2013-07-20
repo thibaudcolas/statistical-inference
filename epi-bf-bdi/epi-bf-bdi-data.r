@@ -11,3 +11,7 @@ dim(data)
 # Overview
 
 summary(data)
+
+# Linear model visualization
+
+plot(jitter(epiImp), jitter(epiE), xlab="Impulsiveness Level", ylab="General Extroversion Level", pch=3)

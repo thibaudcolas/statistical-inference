@@ -72,3 +72,22 @@ We thus have 231 results for fifteen variables.
    3rd Qu.:46.50                     
    Max.   :79.00 
 ```
+
+## Fitting linear models
+
+We want to analyze the relation between impulsiveness and general extroversion levels, both evaluated by the EPI test. We will analyze the link between the two variables with the following linear model :
+
+> Y = α + βX + ε
+
+Where :
+
+> Extroversion = α + β x Impulsiveness + ε
+
+We first visualize the data with a scatterplot :
+
+```r
+  > plot(jitter(epiImp), jitter(epiE), xlab="Impulsiveness Level", ylab="General Extroversion Level", pch=3)
+```
+
+![Scatterplot 1](scatterplot-1.png)
+
