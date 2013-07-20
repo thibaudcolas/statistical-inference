@@ -1,6 +1,8 @@
 # Statistical inference applied on EPI, BF and BDI scores
 
-## Loading the dataset
+## Getting started
+
+### Loading the data
 
 To load the dataset into R :
 
@@ -36,3 +38,37 @@ To see how big the dataset is, we use `dim` :
 ```
 
 We thus have 231 results for fifteen variables.
+
+### Overview of the dataset
+
+```r
+  > summary(data)
+        epiE            epiS            epiImp          epilie     
+   Min.   : 1.00   Min.   : 0.000   Min.   :0.000   Min.   :0.000  
+   1st Qu.:11.00   1st Qu.: 6.000   1st Qu.:3.000   1st Qu.:1.000  
+   Median :14.00   Median : 8.000   Median :4.000   Median :2.000  
+   Mean   :13.33   Mean   : 7.584   Mean   :4.368   Mean   :2.377  
+   3rd Qu.:16.00   3rd Qu.: 9.500   3rd Qu.:6.000   3rd Qu.:3.000  
+   Max.   :22.00   Max.   :13.000   Max.   :9.000   Max.   :7.000  
+      epiNeur         bfagree          bfcon           bfext      
+   Min.   : 0.00   Min.   : 74.0   Min.   : 53.0   Min.   :  8.0  
+   1st Qu.: 7.00   1st Qu.:112.0   1st Qu.: 99.0   1st Qu.: 87.5  
+   Median :10.00   Median :126.0   Median :114.0   Median :104.0  
+   Mean   :10.41   Mean   :125.0   Mean   :113.3   Mean   :102.2  
+   3rd Qu.:14.00   3rd Qu.:136.5   3rd Qu.:128.5   3rd Qu.:118.0  
+   Max.   :23.00   Max.   :167.0   Max.   :178.0   Max.   :168.0  
+       bfneur           bfopen           bdi            traitanx    
+   Min.   : 34.00   Min.   : 73.0   Min.   : 0.000   Min.   :22.00  
+   1st Qu.: 70.00   1st Qu.:110.0   1st Qu.: 3.000   1st Qu.:32.00  
+   Median : 90.00   Median :125.0   Median : 6.000   Median :38.00  
+   Mean   : 87.97   Mean   :123.4   Mean   : 6.779   Mean   :39.01  
+   3rd Qu.:104.00   3rd Qu.:136.5   3rd Qu.: 9.000   3rd Qu.:44.00  
+   Max.   :152.00   Max.   :173.0   Max.   :27.000   Max.   :71.00  
+      stateanx     sex        age    
+   Min.   :21.00   F:119   20-30:66  
+   1st Qu.:32.00   H:112   31-45:88  
+   Median :38.00           46-60:77  
+   Mean   :39.85                     
+   3rd Qu.:46.50                     
+   Max.   :79.00 
+```
