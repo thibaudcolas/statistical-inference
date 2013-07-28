@@ -15,3 +15,8 @@ summary(data)
 # Linear model visualization
 
 plot(jitter(epiImp), jitter(epiE), xlab="Impulsiveness Level", ylab="General Extroversion Level", pch=3)
+
+# Linear model construction
+
+mod <- lm(epiE~epiImp)
+summary(mod)

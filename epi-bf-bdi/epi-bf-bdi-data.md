@@ -94,3 +94,26 @@ We first visualize the data with a scatterplot :
 With the help of the scatterplot's shape, we can infer that there is a linear relationship between impulsiveness and extroversion levels.
 
 We now proceed towards a more thorough analysis by creating a linear model with `lm`.
+
+```r
+  > mod <- lm(epiE~epiImp)
+  > summary(mod)
+
+  Call:
+  lm(formula = epiE ~ epiImp)
+
+  Residuals:
+      Min      1Q  Median      3Q     Max 
+  -7.9657 -1.4457  0.0743  1.5743  6.0743 
+
+  Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+  (Intercept)  5.64574    0.41262   13.68   <2e-16 ***
+  epiImp       1.75999    0.08677   20.28   <2e-16 ***
+  ---
+  Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1 
+
+  Residual standard error: 2.478 on 229 degrees of freedom
+  Multiple R-squared: 0.6424, Adjusted R-squared: 0.6408 
+  F-statistic: 411.4 on 1 and 229 DF,  p-value: < 2.2e-16 
+```
