@@ -91,3 +91,6 @@ We first visualize the data with a scatterplot :
 
 ![Scatterplot 1](scatterplot-1.png)
 
+With the help of the scatterplot's shape, we can infer that there is a linear relationship between impulsiveness and extroversion levels.
+
+We now proceed towards a more thorough analysis by creating a linear model with `lm`.
