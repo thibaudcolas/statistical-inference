@@ -83,6 +83,8 @@ Where :
 
 > Extroversion = α + β x Impulsiveness + ε
 
+### Visualization
+
 We first visualize the data with a scatterplot :
 
 ```r
@@ -92,6 +94,8 @@ We first visualize the data with a scatterplot :
 ![Scatterplot 1](scatterplot-1.png)
 
 With the help of the scatterplot's shape, we can infer that there is a linear relationship between impulsiveness and extroversion levels.
+
+### Creating a linear model
 
 We now proceed towards a more thorough analysis by creating a linear model with `lm`.
 
@@ -117,3 +121,9 @@ We now proceed towards a more thorough analysis by creating a linear model with 
   Multiple R-squared: 0.6424, Adjusted R-squared: 0.6408 
   F-statistic: 411.4 on 1 and 229 DF,  p-value: < 2.2e-16 
 ```
+
+Signifiance tests for our two variables (Intercept and epiImp) give probabilities under the usual 5% threshold, we can thus rewrite our linear model:
+
+> Extroversion = 5,6 + 1,8 x Impulsiveness + ε
+
+With 64% for R², 64% of the impulsiveness levels explain the extroversion level.
