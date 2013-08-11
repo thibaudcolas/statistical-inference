@@ -127,3 +127,18 @@ Signifiance tests for our two variables (Intercept and epiImp) give probabilitie
 > Extroversion = 5,6 + 1,8 x Impulsiveness + ε
 
 With 64% for R², 64% of the impulsiveness levels explain the extroversion level.
+
+### Validity of the analysis
+
+We'll test:
+
+- Mean of 0 for the residuals
+- Gaussian distribution for the residuals
+- Constant variance.
+
+#### Mean of 0 for the residuals
+
+```r
+  > mean(mod$residuals)
+  [1] -2.437624e-17
+```

@@ -20,3 +20,7 @@ plot(jitter(epiImp), jitter(epiE), xlab="Impulsiveness Level", ylab="General Ext
 
 mod <- lm(epiE~epiImp)
 summary(mod)
+
+# Mean of the residuals
+
+mean(mod$residuals)
