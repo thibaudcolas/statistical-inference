@@ -174,3 +174,7 @@ Residuals are aligned to the bisector, their distribution is balanced around 0 a
 ![predicted residuals 1](predicted-residuals-1.png)
 
 According to those plots, residuals are randomly distributed, we thus comply with homoscedasticity.
+
+### Comments
+
+None of the above hypothesis is violated, thus our linear model is valid.
