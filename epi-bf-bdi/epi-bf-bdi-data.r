@@ -29,3 +29,13 @@ mean(mod$residuals)
 
 qqnorm(mod$residuals)
 qqline(mod$residuals,col="tomato",lwd=3)
+
+# Homoscedasticity
+
+normResiduals <- rstudent(mod)
+
+plot(jitter(epiImp), normResiduals, pch=3, main="Variable against studentized residuals", xlab="Impulsiveness level", ylab="Residuals")
+lines(c(-1,10), c(0,0), lty=2, col="tomato", lwd=3)
+
+plot(jitter(mod$fitted.values), normResiduals, pch=3, main="Predicted values against studentized residuals", xlab="Predicted values", ylab="Residuals")
+lines(c(-1,30), c(0,0), lty=2, col="tomato", lwd=3)

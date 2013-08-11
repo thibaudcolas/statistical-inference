@@ -155,3 +155,22 @@ We will plot the quantiles-quantiles graph with the bisector for the ideal align
 ![quantiles quantiles 1](quantiles-quantiles-1.png)
 
 Residuals are aligned to the bisector, their distribution is balanced around 0 approaching a Gaussian distribution.
+
+
+#### Homoscedasticity
+
+```r
+  > normResiduals <- rstudent(mod)
+
+  > plot(jitter(epiImp), normResiduals, pch=3, main="Variable against studentized residuals", xlab="Impulsiveness level", ylab="Residuals")  
+  > lines(c(-1,10), c(0,0), lty=2, col="tomato", lwd=3)  
+
+  > plot(jitter(mod$fitted.values), normResiduals, pch=3, main="Predicted values against studentized residuals", xlab="Predicted values", ylab="Residuals")  
+  > lines(c(-1,30), c(0,0), lty=2, col="tomato", lwd=3)  
+```
+
+![variable residuals 1](variable-residuals-1.png)
+
+![predicted residuals 1](predicted-residuals-1.png)
+
+According to those plots, residuals are randomly distributed, we thus comply with homoscedasticity.
