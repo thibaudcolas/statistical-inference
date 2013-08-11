@@ -142,3 +142,16 @@ We'll test:
   > mean(mod$residuals)
   [1] -2.437624e-17
 ```
+
+####  Gaussian distribution
+
+We will plot the quantiles-quantiles graph with the bisector for the ideal alignment.
+
+```r
+  > qqnorm(mod$residuals)
+  > qqline(mod$residuals,col="tomato",lwd=3)
+```
+
+![quantiles quantiles 1](quantiles-quantiles-1.png)
+
+Residuals are aligned to the bisector, their distribution is balanced around 0 approaching a Gaussian distribution.

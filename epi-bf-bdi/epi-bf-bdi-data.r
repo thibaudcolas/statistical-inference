@@ -24,3 +24,8 @@ summary(mod)
 # Mean of the residuals
 
 mean(mod$residuals)
+
+# Gaussian distribution
+
+qqnorm(mod$residuals)
+qqline(mod$residuals,col="tomato",lwd=3)
