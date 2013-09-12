@@ -234,3 +234,11 @@ There are no directly visible patterns on this new scatter plot. We proceed to c
 ```
 
 Signifiance tests for `sex` are at 27%, way over the 5% threshold. This variable thus has no significant impact in our model.
+
+### Analyzing the influence of age
+
+```r
+  > boxplot(epiImp~age,col="orange", xlab="Age class",ylab="Impulsiveness score")
+```
+
+![Box diagram 1](box-diagram-1.png)

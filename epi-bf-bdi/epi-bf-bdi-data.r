@@ -47,3 +47,7 @@ legend("bottomright", "(x,y)", c("Female", "Male"), pch=c(5,15), col=c("red", "b
 
 mod2 <- lm(epiE~epiImp + sex)
 summary(mod2)
+
+# Influence of age
+
+boxplot(epiImp~age,col="orange", xlab="Age class",ylab="Impulsiveness score")
