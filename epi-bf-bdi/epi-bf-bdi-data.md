@@ -204,4 +204,33 @@ We now visualize our dataset using `ifelse` to distinguish male and female data 
 
 ![Scatterplot 2](scatterplot-2.png)
 
-There are no directly visible patterns on this new scatter plot.
+There are no directly visible patterns on this new scatter plot. We proceed to creating a new linear model.
+
+```r
+  > mod2 <- lm(epiE~epiImp + sex)
+  > summary(mod2)
+
+  Call:
+  lm(formula = epiE ~ epiImp)
+
+  Call:
+  lm(formula = epiE ~ epiImp + sex)
+
+  Residuals:
+      Min      1Q  Median      3Q     Max 
+  -8.1467 -1.4742  0.1384  1.6150  5.9001 
+
+  Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+  (Intercept)  5.81488    0.43935  13.235   <2e-16 ***
+  epiImp       1.76168    0.08674  20.310   <2e-16 ***
+  sexM        -0.36408    0.32615  -1.116    0.265    
+  ---
+  Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1 
+
+  Residual standard error: 2.477 on 228 degrees of freedom
+  Multiple R-squared: 0.6443, Adjusted R-squared: 0.6412 
+  F-statistic: 206.5 on 2 and 228 DF,  p-value: < 2.2e-16 
+```
+
+Signifiance tests for `sex` are at 27%, way over the 5% threshold. This variable thus has no significant impact in our model.
