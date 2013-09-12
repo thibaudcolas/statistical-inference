@@ -178,3 +178,30 @@ According to those plots, residuals are randomly distributed, we thus comply wit
 ### Comments
 
 None of the above hypothesis is violated, thus our linear model is valid.
+
+### Taking sex into account
+
+We now have:
+
+> Y = α + β1X1 + β1X2 + ε
+
+Where:
+
+> Extroversion = α + β1 x Impulsiveness + β2 x Sex + ε
+
+Sex being binary, we thus have:
+
+> Extroversion = α + β1 x Impulsiveness + β2 x Female + ε
+> Extroversion = α + β1 x Impulsiveness + β2 x Male + ε
+
+We now visualize our dataset using `ifelse` to distinguish male and female data points.
+
+```r
+  > plot(jitter(epiImp), jitter(epiE), xlab="Impulsiveness Level", ylab="General Extroversion Level", , pch=ifelse(sex=="F",5,15), col=ifelse(sex=="F","red", "blue"))
+
+  > legend("bottomright", "(x,y)", c("Female", "Male"), pch=c(5,15), col=c("red", "blue"))
+```
+
+![Scatterplot 2](scatterplot-2.png)
+
+There are no directly visible patterns on this new scatter plot.

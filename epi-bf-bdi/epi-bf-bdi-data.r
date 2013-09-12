@@ -39,3 +39,8 @@ lines(c(-1,10), c(0,0), lty=2, col="tomato", lwd=3)
 
 plot(jitter(mod$fitted.values), normResiduals, pch=3, main="Predicted values against studentized residuals", xlab="Predicted values", ylab="Residuals")
 lines(c(-1,30), c(0,0), lty=2, col="tomato", lwd=3)
+
+# Accounting for gender differences
+
+plot(jitter(epiImp), jitter(epiE), xlab="Impulsiveness Level", ylab="General Extroversion Level", , pch=ifelse(sex=="F",5,15), col=ifelse(sex=="F","red", "blue"))
+legend("bottomright", "(x,y)", c("Female", "Male"), pch=c(5,15), col=c("red", "blue"))
