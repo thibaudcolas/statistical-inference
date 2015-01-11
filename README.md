@@ -11,4 +11,8 @@ We use the [R language](http://www.r-project.org) to play with the datasets.
 ## Analysis
 
 * [Homework marks](https://github.com/ThibWeb/statistical-inference/blob/master/marks/marks-data.md)
-* [EPI, BF, BDI - Coming Soon](https://github.com/ThibWeb/statistical-inference/blob/master/epi-bf-bdi/epi-bf-bdi-data.md)
+* [EPI, BF, BDI](https://github.com/ThibWeb/statistical-inference/blob/master/epi-bf-bdi/epi-bf-bdi-data.md)
+
+## Other
+
+- This repo is also home to some [matplotlib](http://matplotlib.org/) [experiments](https://github.com/ThibWeb/statistical-inference/blob/master/matplotlib/).
