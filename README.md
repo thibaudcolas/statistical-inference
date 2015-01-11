@@ -4,7 +4,7 @@
 
 -- [Wikipedia](https://en.wikipedia.org/wiki/Statistical_inference)
 
-Here are compiled some examples of statistical inference methods applied on various datasets to construct interesting analysis.
+Examples of statistical inference methods applied on various datasets to construct interesting analysis.
 
 We use the [R language](http://www.r-project.org) to play with the datasets.
 
